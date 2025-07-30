@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://bxmcwqrjtcvwd"]
+
+[ext_resource type="Texture2D" uid="uid://mghjd5dp7dwe" path="res://assets/textures/bg.png" id="1_srtnj"]
+[ext_resource type="Texture2D" uid="uid://smc53de1bewm" path="res://assets/textures/enemy_ship.png" id="2_ekvby"]
+
+[node name="Game" type="Node2D"]
+
+[node name="Background" type="TextureRect" parent="."]
+offset_right = 1154.0
+offset_bottom = 650.0
+texture = ExtResource("1_srtnj")
+stretch_mode = 1
+
+[node name="EnemyShip" type="Sprite2D" parent="."]
+position = Vector2(856, 323)
+texture = ExtResource("2_ekvby")
