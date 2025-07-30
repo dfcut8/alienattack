@@ -15,3 +15,18 @@ func _physics_process(_delta: float) -> void:
 	if Input.is_action_pressed("player_move_up"):
 		velocity.y = -SPEED
 	move_and_slide()
+	
+	var viewport_size = get_viewport_rect().size
+	if global_position.x < 0:
+		global_position.x = 0
+	if global_position.x > viewport_size.x:
+		global_position.x = viewport_size.x
+	if global_position.y < 0:
+		global_position.y = 0
+	if global_position.y > viewport_size.y:
+		global_position.y = viewport_size.y
+		
+	
+	print(viewport_size)
+	
+	#print(global_position)
