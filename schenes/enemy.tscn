@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://dbr1n1u7m6b5o"]
+
+[ext_resource type="Texture2D" uid="uid://smc53de1bewm" path="res://assets/textures/enemy_ship.png" id="1_53hvd"]
+[ext_resource type="Script" uid="uid://ddev5yqkhkix7" path="res://scripts/enemy.gd" id="1_nmhau"]
+
+[node name="Enemy" type="Area2D"]
+rotation = -1.5708
+scale = Vector2(0.25, 0.25)
+script = ExtResource("1_nmhau")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_53hvd")
+flip_h = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+build_mode = 1
+polygon = PackedVector2Array(37.1, -258.9, 18, -241.9, 2.8, -247, -2.10001, -247, -13.6, -235.6, -37.9, -258.9, -44, -256.3, -44, -253.7, -85.4, -201, -88.2, -201, -102.2, -116, -104.6, -116, -97.9, -57.2, -103, -41.8, -103, -38.5, -115.6, -20.2, -142.4, -4, -145.1, -4, -178.1, 30, -180.2, 30, -207, 87.9, -207, 97.5, -180.1, 90.1, -163.4, 100, -159.4, 100, -144.4, 89.2, -126.8, 90.9, -114, 111.3, -114, 114.2, -54.8, 167.2, -39, 209, -39, 211.6, -6, 257.6, -6, 260.6, 0.899994, 262.9, 29.5, 224, 31.3, 224, 55, 168, 55, 167.2, 107, 119, 108.6, 119, 129.7, 88.4, 138.2, 87, 140.5, 87, 153, 95.5, 153, 101.9, 176.8, 90.6, 199.3, 97, 208.7, 97, 181, 34.8, 181, 31.6, 112.1, -23.8, 94, -57.2, 94, -63.6, 99.7, -68, 104.1, -68, 103, -130.1, 103, -140.9, 77, -213.9, 77, -216.9, 43, -254, 43, -256.2)
