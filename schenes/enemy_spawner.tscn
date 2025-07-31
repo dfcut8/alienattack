@@ -25,7 +25,7 @@ position = Vector2(1204, 474)
 [node name="SpawnPosition_06" type="Marker2D" parent="SpawnPositions"]
 position = Vector2(1203, 586)
 
-[node name="Timer" type="Timer" parent="."]
+[node name="SpawnTimer" type="Timer" parent="."]
 autostart = true
 
-[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="SpawnTimer" to="." method="_on_timer_timeout"]
