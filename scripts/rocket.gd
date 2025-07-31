@@ -1,15 +1,18 @@
 extends Area2D
 
+
 @export var speed = 600
+@onready var notifier = $VisibleNotifier
 
-# Called when the node enters the scene tree for the first time.
+
 func _ready() -> void:
-	pass # Replace with function body.
+	notifier.screen_exited.connect(_on_screen_exited)
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
 
 func _physics_process(delta: float) -> void:
 	global_position.x += speed * delta
+
+func _on_screen_exited() -> void:
+	queue_free()
