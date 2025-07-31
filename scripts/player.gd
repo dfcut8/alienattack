@@ -2,7 +2,13 @@ extends CharacterBody2D
 
 
 @export var speed = 400.0
+var rocket_scene: Resource = preload("res://schenes/rocket.tscn")
 
+
+func _process(_delta: float) -> void:
+	if Input.is_action_just_pressed("player_fire"):
+		print("fired!")
+		_fire()
 
 func _physics_process(_delta: float) -> void:
 	velocity = Vector2(0, 0)
@@ -20,3 +26,8 @@ func _physics_process(_delta: float) -> void:
 	
 	var viewport_size = get_viewport_rect().size
 	global_position = global_position.clamp(Vector2(0,0), viewport_size)
+
+func _fire():
+	var rocket_scene_instance = rocket_scene.instantiate()
+	add_child(rocket_scene_instance)
+	rocket_scene_instance.global_position.x += 50
